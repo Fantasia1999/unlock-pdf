@@ -9,7 +9,7 @@ fi
 
 output_dir="${input_dir}.decrypted"
 mkdir -p $output_dir
-
+IFS=$(echo -en "\n\b")
 for fn in `ls -1 $input_dir`
 do
 	qpdf --decrypt ${input_dir}/$fn ${output_dir}/$fn
